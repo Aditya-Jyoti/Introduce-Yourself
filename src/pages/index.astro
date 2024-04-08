@@ -72,9 +72,7 @@ console.log(author);
             ---
           </span>
           <span>
-            5. Add an image in the format <strong class="text-[0.9rem]"
-              >image.jpg</strong
-            > if you want to add one
+            5. Add an image in <strong class="text-[0.9rem]">public/</strong> and give it the same name as the folder
           </span>
           <span>
             6. Add your changes <strong class="text-[0.9rem]"
@@ -138,7 +136,7 @@ console.log(author);
           {author?.data.image ? 
            <img src=`/Introduce-Yourself/${author?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
           /> : 
-           <img src=`/Introduce-Yourself/public/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+           <img src=`/Introduce-Yourself/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
           }
         </div>
 
@@ -175,7 +173,7 @@ console.log(author);
 
            <img src=`/Introduce-Yourself/${introduction?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
             /> : 
-            <img src=`/Introduce-Yourself/public/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+            <img src=`/Introduce-Yourself/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
             
             }
           </div>
