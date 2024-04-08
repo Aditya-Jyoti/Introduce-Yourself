@@ -27,12 +27,3 @@ jobs:
       - name: Run PR checks
         run: |
           python pr_check.py
-
-      - name: Merge PR if checks passed
-        if: success() && github.event_name == 'pull_request'
-        run: |
-          curl -X PUT \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"merge_method":"squash"}' \
-            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/merge"
