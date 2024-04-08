@@ -13,8 +13,6 @@ for (let i = 0; i < allIntroductions.length; i++) {
     allIntroductions.splice(i, 1);
   }
 }
-
-console.log(author);
 ---
 
 <Layout>
@@ -136,7 +134,7 @@ console.log(author);
           {author?.data.image ? 
            <img src=`/Introduce-Yourself/${author?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
           /> : 
-           <img src=`/Introduce-Yourself/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+           <img src="/Introduce-Yourself/__default_user.png" alt="default user" class="w-[10rem] h-[10rem] md:flex hidden" />
           }
         </div>
 
@@ -173,7 +171,7 @@ console.log(author);
 
            <img src=`/Introduce-Yourself/${introduction?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
             /> : 
-            <img src=`/Introduce-Yourself/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+            <img src="/Introduce-Yourself/__default_user.png" alt="default user" class="w-[10rem] h-[10rem] md:flex hidden" />
             
             }
           </div>
