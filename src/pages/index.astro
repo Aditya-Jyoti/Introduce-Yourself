@@ -1,5 +1,20 @@
 ---
 import Layout from "@layouts/Layout.astro";
+
+import { getCollection } from "astro:content";
+
+const allIntroductions = await getCollection("introductions");
+
+let author;
+
+for (let i = 0; i < allIntroductions.length; i++) {
+  if (allIntroductions[i].data.name === "Aditya Jyoti") {
+    author = allIntroductions[i];
+    allIntroductions.splice(i, 1);
+  }
+}
+
+console.log(author);
 ---
 
 <Layout>
@@ -46,14 +61,14 @@ import Layout from "@layouts/Layout.astro";
           </span>
           <span> 4. Inside that file follow this format </span>
           <span
-            class="ml-4 bg-foreground bg-opacity-10 text-sm w-[90%] p-2 mb-2"
+            class="ml-4 bg-foreground bg-opacity-10 text-sm w-[95%] p-2 mb-2"
           >
             --- <br />
             name: [your name] <br />
-            interests: [comma separated list of interests] <br />
+            interests: [3 comma separated interests] <br />
             description: [talk about yourself] <br />
             github: [add your github link] <br />
-            image: [optional: add an image of yourself] <br />
+            image: [true/false] <br />
             ---
           </span>
           <span>
@@ -88,6 +103,84 @@ import Layout from "@layouts/Layout.astro";
           and make some friends!
         </span>
       </div>
+    </div>
+    <div class="mt-4">
+      <span class="text-2xl font-semibold">Introductions</span>
+      <section class="flex flex-col p-4 gap-4">
+        <div
+          class="bg-gray bg-opacity-15 border-2 border-foreground border-opacity-15 p-2 px-4 flex justify-between"
+        >
+          <div class="flex flex-col w-[80%]">
+            <span class="text-xl font-semibold"
+              >{author?.data.name} (Creator)</span
+            >
+            <span class="flex-grow mt-1">{author?.data.description}</span>
+            <div class="flex justify-between items-center">
+              <div class="flex gap-2">
+                {
+                  author?.data.interests
+                    .split(",")
+                    .splice(0, 3)
+                    .map((interest) => (
+                        <span class="bg-gray bg-opacity-25 rounded-xl flex items-center justify-center px-2 md:py-1 font-semibold">
+                        {interest}
+                      </span>
+                    ))
+                }
+              </div>
+
+              <a href={author?.data.github} class="mr-2 md:flex hidden">
+                <i class="fa-brands fa-github text-3xl"></i>
+              </a>
+            </div>
+          </div>
+
+          {author?.data.image ? 
+           <img src=`src/content/introductions/${author?.id.split("/")[0]}/image.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
+          /> : 
+           <img src=`/default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+          }
+        </div>
+
+        {allIntroductions.map((introduction) => (
+          <div
+            class="bg-gray bg-opacity-15 border-2 border-foreground border-opacity-15 p-2 px-4 flex justify-between items-center"
+          >
+            <div class="flex flex-col md:w-[80%] w-[95%]">
+              <span class="text-xl font-semibold"
+                >{introduction?.data.name}</span
+              >
+              <span class="flex-grow mt-1">{introduction?.data.description}</span>
+              <div class="flex justify-between items-center mt-2">
+                <div class="flex gap-2">
+                  {
+                    introduction?.data.interests
+                      .split(",")
+                      .splice(0, 3)
+                      .map((interest) => (
+                        <span class="bg-gray bg-opacity-25 rounded-xl flex items-center justify-center px-2 md:py-1 font-semibold">
+                          {interest}
+                        </span>
+                      ))
+                  }
+                </div>
+
+                <a href={introduction?.data.github} class="mr-2 md:flex hidden">
+                  <i class="fa-brands fa-github text-3xl"></i>
+                </a>
+              </div>
+            </div>
+
+            {introduction?.data.image ? 
+            <img src=`src/content/introductions/${introduction?.id.split("/")[0]}/image.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
+            /> : 
+            <img src=`/default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+            
+            }
+          </div>
+      ))}
+
+      </section>
     </div>
   </section>
 </Layout>
