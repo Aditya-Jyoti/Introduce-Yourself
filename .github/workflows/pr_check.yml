@@ -19,4 +19,4 @@ jobs:
           python-version: 3.11
 
       - name: Run Python script
-        run: python pr_check.py # Assuming the script is named check_folders.py
+        run: python pr_check.py
