@@ -1,5 +1,5 @@
 ---
-
+import Footer from "@components/Footer.astro";
 ---
 
 <html lang="en">
@@ -23,7 +23,12 @@
 
     <title>Introduce Yourself</title>
   </head>
-  <body>
-    <slot />
+  <body class="min-h-screen w-full bg-background text-foreground font-main">
+    <main class="w-3/5 mx-auto min-h-screen flex flex-col items-center p-8">
+      <div class="flex-grow w-full">
+        <slot />
+      </div>
+      <Footer />
+    </main>
   </body>
 </html>
