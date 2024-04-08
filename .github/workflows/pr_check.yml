@@ -1,4 +1,4 @@
-name: Check Added Folders
+name: PR Checks and Auto Merge
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main # Adjust the branch as needed
 
 jobs:
-  check_folders:
+  pr_checks:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,17 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.11
+          python-version: 3.x # Specify Python version
 
-      - name: Run Python script
-        run: python pr_check.py
+      - name: Run PR checks
+        run: |
+          python pr_checks.py
+
+      - name: Merge PR if checks passed
+        if: success() && github.event_name == 'pull_request'
+        run: |
+          curl -X PUT \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"merge_method":"squash"}' \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/merge"
