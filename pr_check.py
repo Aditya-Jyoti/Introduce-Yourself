@@ -21,6 +21,7 @@ def check_pr_added_folders(directory="."):
             print(f"Success: '{folder}' folder was added in 'src/content/introductions'.")
     else:
         print("Error: No folders were added in 'src/content/introductions'.")
+        sys.exit(1)
 
 if __name__ == "__main__":
     check_pr_added_folders()
