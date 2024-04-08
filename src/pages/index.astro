@@ -23,7 +23,7 @@ console.log(author);
   <section class="md:px-4 py-4">
     <div class="w-full flex flex-col gap-4">
       <img
-        src="/Introduce-Yourself/public/about.jpg"
+        src="/Introduce-Yourself/__about.jpg"
         alt="about"
         class="border-2 border-foreground md:h-32 h-20"
       />
@@ -136,9 +136,9 @@ console.log(author);
           </div>
 
           {author?.data.image ? 
-           <img src=`/Introduce-Yourself/public/introductions/${author?.id.split("/")[0]}/image.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
+           <img src=`/Introduce-Yourself/${author?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
           /> : 
-           <img src=`/Introduce-Yourself/public/default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+           <img src=`/Introduce-Yourself/public/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
           }
         </div>
 
@@ -172,9 +172,10 @@ console.log(author);
             </div>
 
             {introduction?.data.image ? 
-            <img src=`/Introduce-Yourself/public/introductions/${introduction?.id.split("/")[0]}/image.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
+
+           <img src=`/Introduce-Yourself/${introduction?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
             /> : 
-            <img src=`/Introduce-Yourself/public/default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
+            <img src=`/Introduce-Yourself/public/__default_user.png` alt="user" class="w-[10rem] h-[10rem] md:flex hidden" />
             
             }
           </div>
