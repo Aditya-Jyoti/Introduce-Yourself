@@ -5,4 +5,83 @@ import Layout from "@layouts/Layout.astro";
 <Layout>
   <span class="text-4xl font-bold w-full">Hello Everyone!</span>
   <div class="border-b-2 border-foreground w-full mt-2"></div>
+  <section class="p-4">
+    <div class="w-full flex flex-col gap-4">
+      <img src="/about.jpg" alt="about" class="border-2 border-foreground" />
+      <div class="text-xl flex flex-col">
+        <span
+          >Welcome to making your first <strong>github contribution!</strong
+          ></span
+        >
+        <span>
+          Here, you can introduce yourself to people and find others with common
+          interests, eventually building meaningful connections with the hope of
+          helping each other in your open source journey.
+        </span>
+        <span class="mt-2 mb-2">Heres how you get started...</span>
+        <div class="text-lg ml-4 flex flex-col">
+          <span>
+            1. Make a <a
+              href="https://github.com/Aditya-Jyoti/Introduce-Yourself"
+              class="underline underline-offset-2">fork</a
+            > and then clone <strong class="text-[0.9rem]"
+              >[$git clone "url"]</strong
+            > that repository
+          </span>
+          <span>
+            2. Make a new folder <strong class="text-[0.9rem]"
+              >[your name]</strong
+            > inside <strong class="text-[0.9rem]"
+              >src/content/introductions</strong
+            >
+          </span>
+          <span>
+            3. Make a new file inside that folder <strong class="text-[0.9rem]"
+              >introduction.md</strong
+            >
+          </span>
+          <span> 4. Inside that file follow this format </span>
+          <span class="ml-4 bg-foreground bg-opacity-10 text-sm w-[90%] p-2">
+            --- <br />
+            name: [your name] <br />
+            interests: [comma separated list of interests] <br />
+            description: [talk about yourself] <br />
+            github: [add your github link] <br />
+            image: [optional: add an image of yourself] <br />
+            ---
+          </span>
+          <span>
+            5. Add an image in the format <strong class="text-[0.9rem]"
+              >image.jpg</strong
+            > if you want to add one
+          </span>
+          <span>
+            6. Add your changes <strong class="text-[0.9rem]"
+              >[$git add .]</strong
+            > for staging
+          </span>
+          <span>
+            7. Commit your changes <strong class="text-[0.9rem]"
+              >[$git commit -m "descriptive message"]</strong
+            >
+          </span>
+          <span>
+            8. Push <strong class="text-[0.9rem]">[$git push]</strong> your changes
+            to your fork
+          </span>
+          <span>
+            9. Make a pull request to the main <a
+              href="https://github.com/aditya-jyoti/introduce-yourself"
+              class="underline underline-offset-2">repository</a
+            ></span
+          >
+        </div>
+        <span class="mt-2">
+          Great! Now all you have to do is wait for your pull request to be
+          merged. In the meantime, you can check out other people's
+          introductions and make some friends!
+        </span>
+      </div>
+    </div>
+  </section>
 </Layout>
