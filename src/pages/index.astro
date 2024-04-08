@@ -5,11 +5,15 @@ import Layout from "@layouts/Layout.astro";
 <Layout>
   <span class="text-4xl font-bold w-full">Hello Everyone!</span>
   <div class="border-b-2 border-foreground w-full mt-2"></div>
-  <section class="p-4">
+  <section class="md:px-4 py-4">
     <div class="w-full flex flex-col gap-4">
-      <img src="/about.jpg" alt="about" class="border-2 border-foreground" />
-      <div class="text-xl flex flex-col">
-        <span
+      <img
+        src="/about.jpg"
+        alt="about"
+        class="border-2 border-foreground md:h-32 h-20"
+      />
+      <div class="md:text-xl text-lg flex flex-col">
+        <span class="mb-2"
           >Welcome to making your first <strong>github contribution!</strong
           ></span
         >
@@ -19,7 +23,7 @@ import Layout from "@layouts/Layout.astro";
           helping each other in your open source journey.
         </span>
         <span class="mt-2 mb-2">Heres how you get started...</span>
-        <div class="text-lg ml-4 flex flex-col">
+        <div class="md:text-lg text-[1rem] gap-2 md:ml-4 flex flex-col">
           <span>
             1. Make a <a
               href="https://github.com/Aditya-Jyoti/Introduce-Yourself"
@@ -41,7 +45,9 @@ import Layout from "@layouts/Layout.astro";
             >
           </span>
           <span> 4. Inside that file follow this format </span>
-          <span class="ml-4 bg-foreground bg-opacity-10 text-sm w-[90%] p-2">
+          <span
+            class="ml-4 bg-foreground bg-opacity-10 text-sm w-[90%] p-2 mb-2"
+          >
             --- <br />
             name: [your name] <br />
             interests: [comma separated list of interests] <br />
@@ -78,8 +84,8 @@ import Layout from "@layouts/Layout.astro";
         </div>
         <span class="mt-2">
           Great! Now all you have to do is wait for your pull request to be
-          merged. In the meantime, you can check out other people's
-          introductions and make some friends!
+          merged. <br /> In the meantime, you can check out other people's introductions
+          and make some friends!
         </span>
       </div>
     </div>
