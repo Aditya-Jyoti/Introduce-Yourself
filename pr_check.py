@@ -42,7 +42,7 @@ def check_introduction_file(introduction_file):
         sys.exit(1)
 
 
-def validate_pr(directory="."):
+def validate_pr():
     introductions_folder = os.listdir("src/content/introductions")
 
     for folder in introductions_folder:
@@ -57,7 +57,6 @@ def validate_pr(directory="."):
                 f"Error: '{folder}' folder was added in 'src/content/introductions' but does not contain 'introduction.md'."
             )
             sys.exit(0)
-
 
 if __name__ == "__main__":
     validate_pr()
