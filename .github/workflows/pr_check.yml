@@ -1,0 +1,22 @@
+name: Check Added Folders
+
+on:
+  pull_request:
+    branches:
+      - main # Adjust the branch as needed
+
+jobs:
+  check_folders:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+
+      - name: Run Python script
+        run: python pr_check.py # Assuming the script is named check_folders.py
