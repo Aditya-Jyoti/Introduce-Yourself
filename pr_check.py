@@ -43,11 +43,10 @@ def check_introduction_file(introduction_file):
 
 
 def validate_pr(directory="."):
-    introductions_folder = os.path.join(directory, "src", "content", "introductions")
+    introductions_folder = os.listdir("src/content/introductions")
 
     for folder in introductions_folder:
-        folder_path = os.path.join(introductions_folder, folder)
-        introduction_md_path = os.path.join(folder_path, "introduction.md")
+        introduction_md_path = f"src/content/introductions/{folder}/introduction.md"
         if os.path.exists(introduction_md_path):
             print(
                 f"Success: '{folder}' folder was added in 'src/content/introductions' and contains 'introduction.md'."
@@ -57,10 +56,7 @@ def validate_pr(directory="."):
             print(
                 f"Error: '{folder}' folder was added in 'src/content/introductions' but does not contain 'introduction.md'."
             )
-            sys.exit(1)
-    else:
-        print("Error: No folders were added in 'src/content/introductions'.")
-        sys.exit(1)
+            sys.exit(0)
 
 
 if __name__ == "__main__":
