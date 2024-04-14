@@ -2,6 +2,6 @@
 name: jahan ravi
 interests: artificial intelligence and machine learning 
 description: still exploring 
-github: youre already on my github arent you ?
+github: https://github.com/aditya-jyoti
 image: false
 ---
