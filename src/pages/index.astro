@@ -144,7 +144,7 @@ author;
           <div
             class="bg-gray bg-opacity-15 border-2 border-foreground border-opacity-15 p-2 px-4 flex justify-between items-center"
           >
-            <div class="flex flex-col md:w-[80%] w-[95%]">
+            <div class="flex flex-col md:w-full w-[95%]">
               <span class="text-xl font-semibold"
                 >{introduction?.data.name}</span
               >
@@ -168,14 +168,6 @@ author;
                 </a>
               </div>
             </div>
-
-            {introduction?.data.image ? 
-
-           <img src=`/Introduce-Yourself/${introduction?.id.split("/")[0]}.jpg` alt="user" class="w-[10rem] h-[10rem] md:flex hidden"
-            /> : 
-            <img src="/Introduce-Yourself/__default_user.png" alt="default user" class="w-[10rem] h-[10rem] md:flex hidden" />
-            
-            }
           </div>
       ))}
 
