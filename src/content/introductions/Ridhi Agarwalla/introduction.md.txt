@@ -1,0 +1,7 @@
+---
+name: Ridhi Agarwalla
+interests: hi,hello,how
+description: learning new something
+github: https://github.com/ridhiagarwalla/Introduce-Yourself
+image: false
+...
