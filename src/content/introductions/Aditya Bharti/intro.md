@@ -1,2 +1,4 @@
-Aditya Bharti
-hi
+---
+name: Aditya Jyoti
+interests: calisthenics
+---
