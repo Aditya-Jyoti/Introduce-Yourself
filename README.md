@@ -16,4 +16,3 @@ Read the [CONTRIBUTING.md](https://github.com/Aditya-Jyoti/Introduce-Yourself/bl
 
 Read the [CODE_OF_CONDUCT.md](https://github.com/Aditya-Jyoti/Introduce-Yourself/blob/main/CODE_OF_CONDUCT.md) and follow that.
 
-Hi I am A
