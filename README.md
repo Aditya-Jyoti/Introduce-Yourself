@@ -15,4 +15,3 @@ Don't worry if you don't know what the above words mean. If you want to learn he
 Read the [CONTRIBUTING.md](https://github.com/Aditya-Jyoti/Introduce-Yourself/blob/main/CONTRIBUTING.md) file so as to get to know how to get started with contributing here.
 
 Read the [CODE_OF_CONDUCT.md](https://github.com/Aditya-Jyoti/Introduce-Yourself/blob/main/CODE_OF_CONDUCT.md) and follow that.
-
