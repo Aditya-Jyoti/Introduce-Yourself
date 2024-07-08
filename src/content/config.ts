@@ -7,7 +7,6 @@ const introductionCollection = defineCollection({
     interests: z.string(),
     description: z.string(),
     github: z.string().url(),
-    image: z.boolean().optional(),
   }),
 });
 
