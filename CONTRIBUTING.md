@@ -38,7 +38,6 @@ _replace url with the url to your repo_
    interests: [3 comma separated interests]
    description: [talk about yourself]
    github: [add your github link]
-   image: [true or false]
    ---
    ```
 

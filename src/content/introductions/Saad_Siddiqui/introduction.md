@@ -1,7 +1,6 @@
 ---
-name: Saad Siddiqui 
+name: Saad Siddiqui
 interests: robotics, programming, Web Development
-description: idk 
+description: idk
 github: https://github.com/saadsiddiqui1708
-image: false
 ---
