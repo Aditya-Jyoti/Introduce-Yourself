@@ -25,7 +25,6 @@ def check_introduction_file(introduction_file):
         interests:\s*(.*?)\n  # Capture group for the interests field
         description:\s*(.*?)\n  # Capture group for the description field
         github:\s*(.*?)\n  # Capture group for the github field
-        image:\s*(.*?)\n  # Capture group for the image field
         ---$            # End of YAML front matter
     """
     # Compile the regex pattern
